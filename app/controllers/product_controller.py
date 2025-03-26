@@ -80,7 +80,6 @@ class ProductUpdateSchema(BaseModel):
 
 @router.put("/{product_id}")
 def update_product(product_id: int, product_data: ProductUpdateSchema, db: Session = Depends(get_db)):
-    # Buscar o produto no SQLite
     product = db.query(Product).filter(Product.id == product_id).first()
     if not product:
         raise HTTPException(status_code=404, detail="Produto não encontrado")
@@ -113,7 +112,6 @@ def delete_product(product_id: int, db: Session = Depends(get_db)):
 
 @router.get("/products")
 def list_products(db: Session = Depends(get_db)):
-    # Buscar todos os produtos no SQLite
     products = db.query(Product).all()
 
     # Formatar a resposta JSON
