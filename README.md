@@ -36,9 +36,11 @@ API para gerenciamento de produtos, construída com FastAPI, SQLAlchemy e MongoD
 
 
 📌 Rotas da API
-Método	Rota	Descrição
-POST	/products/	Criar um novo produto
-GET	/products/	Listar todos os produtos
-GET	/products/{id}	Obter um produto por ID
-PUT	/products/{id}	Atualizar um produto
-DELETE	/products/{id}	Remover um produto
+| Método  | Rota             | Descrição                 |
+|---------|-----------------|---------------------------|
+| `POST`  | `/products/`     | Criar um novo produto    |
+| `GET`   | `/products/`     | Listar todos os produtos |
+| `GET`   | `/products/{id}` | Obter um produto por ID  |
+| `PUT`   | `/products/{id}` | Atualizar um produto     |
+| `DELETE`| `/products/{id}` | Remover um produto       |
+
